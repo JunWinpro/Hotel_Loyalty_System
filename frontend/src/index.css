@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1B3A6B;
+  --color-primary-light: #2B5292;
+  --color-primary-dark: #0F2344;
+  
+  --color-accent: #C9A84C;
+  --color-accent-light: #DEC176;
+  --color-accent-dark: #A68430;
+  
+  --color-silver: #8A9A86;
+  --color-silver-light: #C0C0C0;
+  
+  --color-platinum: #8E9AA6;
+  --color-platinum-light: #E5E4E2;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 font-sans antialiased;
+}
+
+/* Custom styles for premium layout */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gradient-silver {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #fef08a 0%, #fde047 50%, #eab308 100%);
+}
+
+.gradient-platinum {
+  background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #312e81 100%);
+}
+
+/* Webkit browser autofill override styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f1f5f9 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #090d16 inset !important;
+  box-shadow: 0 0 0px 1000px #090d16 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  border-color: #c9a84c !important;
+}
